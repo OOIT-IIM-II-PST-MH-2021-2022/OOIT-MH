@@ -6,6 +6,14 @@ public class Point {
 	private boolean selected;
 	
 	
+	public double distance(Point p) {
+		int dX = this.x - p.x;
+		int dY = this.y - p.y;
+		double distance = Math.sqrt(dX*dX + dY*dY);
+		return distance;
+	}
+	
+	//Get i Set metode
 	public int getX() {
 		return x;
 	}
