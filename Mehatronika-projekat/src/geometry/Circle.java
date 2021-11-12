@@ -14,6 +14,22 @@ public class Circle {
 		return 2*radius*Math.PI;
 	}
 	
+	//Konstruktori
+	
+	public Circle() {
+		
+	}
+	
+	public Circle(Point center, int radius) {
+		this.center = center;
+		this.radius = radius;
+	}
+	
+	public Circle(Point center, int radius, boolean selected) {
+		this(center, radius);
+		this.selected = selected;
+	}
+	
 	//Get i Set metode
 	public Point getCenter() {
 		return center;

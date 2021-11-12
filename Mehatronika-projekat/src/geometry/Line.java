@@ -10,6 +10,39 @@ public class Line {
 		return startPoint.distance(endPoint);
 	}
 	
+	@Override
+	public String toString() {
+		return "("+this.startPoint.getX() + ", " + this.startPoint.getY() + ") --> "
+				+ "(" + this.endPoint.getX() + ", " + this.endPoint.getY()+")";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Line) {
+			Line temp = (Line) obj;
+			if(startPoint.equals(temp.startPoint) && endPoint.equals(temp.endPoint)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	//Konstruktori
+	
+	public Line() {
+		
+	}
+	
+	public Line(Point startPoint, Point endPoint) {
+		this.startPoint = startPoint;
+		this.endPoint = endPoint;
+	}
+	
+	public Line(Point startPoint, Point endPoint, boolean selected) {
+		this(startPoint, endPoint);
+		this.selected = selected;
+	}
+	
 	//Get i Set metode
 	public Point getStartPoint() {
 		return startPoint;
