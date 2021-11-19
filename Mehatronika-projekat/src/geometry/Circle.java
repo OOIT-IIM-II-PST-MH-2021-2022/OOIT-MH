@@ -2,8 +2,8 @@ package geometry;
 
 public class Circle {
 
-	private Point center;
-	private int radius;
+	protected Point center;
+	protected int radius;
 	private boolean selected;
 	
 	public double area() {
@@ -12,6 +12,32 @@ public class Circle {
 	
 	public double circumference() {
 		return 2*radius*Math.PI;
+	}
+	
+	public boolean contains(int x, int y) {
+		return this.center.getX()+radius >= x && this.center.getY()+radius >= y
+				&& this.center.getX() <= x && this.center.getY() <= y;
+	}
+	
+	public boolean contains(Point p) {
+		return (this.center.getX()+ radius >= p.getX() && this.center.getY()+radius >= p.getY())
+				&& this.center.getX() <= p.getX() && this.center.getY() <= p.getY();
+	}
+	
+	@Override
+	public String toString() {
+		return "Center: (" + this.center.getX() + ", " + this.center.getY() + "), radius = " +this.radius;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Circle) {
+			Circle temp = (Circle) obj;
+			if(this.center.equals(temp.center) && this.radius == temp.radius) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	//Konstruktori

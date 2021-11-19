@@ -82,6 +82,16 @@ public class Test  {
 		System.out.println(l5.equals(l6));
 		System.out.println(l5 == l6);
 		
+		
+		//Vezba 5
+		System.out.println(p1.contains(0, 18));
+		System.out.println(l1.contains(0,15));
+		System.out.println(r1.contains(60,50));
+		c1.getCenter().setY(20);
+		System.out.println(c1.getCenter().getX() + ", " + c1.getCenter().getY());
+		System.out.println(c1.contains(0, 0));
+	
+		
 	}
 
 }
