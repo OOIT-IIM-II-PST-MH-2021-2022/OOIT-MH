@@ -15,13 +15,11 @@ public class Circle {
 	}
 	
 	public boolean contains(int x, int y) {
-		return this.center.getX()+radius >= x && this.center.getY()+radius >= y
-				&& this.center.getX() <= x && this.center.getY() <= y;
+		return center.distance(new Point(x,y)) <= radius;
 	}
 	
 	public boolean contains(Point p) {
-		return (this.center.getX()+ radius >= p.getX() && this.center.getY()+radius >= p.getY())
-				&& this.center.getX() <= p.getX() && this.center.getY() <= p.getY();
+		return contains(p.getX(), p.getY());
 	}
 	
 	@Override
