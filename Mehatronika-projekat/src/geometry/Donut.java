@@ -1,9 +1,10 @@
 package geometry;
 
+import java.awt.Graphics;
+
 public class Donut extends Circle {
 
 	private int innerRadius;
-	private boolean selected;
 	
 	@Override
 	public double area() {
@@ -22,7 +23,8 @@ public class Donut extends Circle {
 	
 	@Override
 	public String toString() {
-		return super.toString() + "inner radius = " + this.innerRadius;
+		return super.toString() + " ,inner radius = " + this.innerRadius;
+		 
 	}
 	
 	@Override
@@ -33,6 +35,12 @@ public class Donut extends Circle {
 				return true;
 			}
 		}return false;
+	}
+	
+	@Override
+	public void draw(Graphics g) {
+		super.draw(g);
+		g.drawOval(center.getX() - innerRadius, center.getY()-innerRadius, innerRadius*2, innerRadius*2);
 	}
 	
 	//Konstruktori

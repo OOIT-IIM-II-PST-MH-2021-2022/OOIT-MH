@@ -9,7 +9,7 @@ public class Test  {
 		//System.out.println("x je: "+p1.getX()+", y je: "+p1.getY() + ", selected je: "+p1.isSelected());
 		//System.out.println("x je: "+p2.getX()+", y je: "+p2.getY() + ", selected je: "+p2.isSelected());
 		//System.out.println(p1);
-		p1.setY(15);
+		/*p1.setY(15);
 		p1.setX(0);
 		p2.setX(33);
 		p2.setY(20);
@@ -70,26 +70,34 @@ public class Test  {
 		System.out.println(p1);*/
 		
 		Circle c2 = new Circle(p1, 30, true);
-		System.out.println(c2.getCenter() + ", " + c2.getRadius() + ", " + c2.isSelected());
-		System.out.println(c2.toString());
-		System.out.println(p1.toString());
-		System.out.println(l1.toString());
-		System.out.println(r1.toString());
+		//System.out.println(c2.getCenter() + ", " + c2.getRadius() + ", " + c2.isSelected());
+		//System.out.println(c2.toString());
+		//System.out.println(p1.toString());
+		//System.out.println(l1.toString());
+		//System.out.println(r1.toString());
 		/*System.out.println(p1.equals(c2));
 		System.out.println(l1.equals(l2));*/
-		Line l5 = new Line(new Point(30,25),new Point(15,10));
+		/*Line l5 = new Line(new Point(30,25),new Point(15,10));
 		Line l6 = new Line(new Point(30,25),new Point(15,10));
 		System.out.println(l5.equals(l6));
-		System.out.println(l5 == l6);
+		System.out.println(l5 == l6);*/
 		
 		
 		//Vezba 5
-		System.out.println(p1.contains(0, 18));
+		/*System.out.println(p1.contains(0, 18));
 		System.out.println(l1.contains(0,15));
 		System.out.println(r1.contains(60,50));
 		c1.getCenter().setY(20);
 		System.out.println(c1.getCenter().getX() + ", " + c1.getCenter().getY());
 		System.out.println(c1.contains(0, 0));
+		Donut d1 = new Donut(c1.getCenter(), c1.getRadius(), 33);
+		Donut d2 = new Donut(c1.getCenter(), c1.getRadius(), 33);
+		System.out.println(d1.equals(d2));*/
+		
+		//Vezba 6
+		System.out.println(c2.toString());
+		Donut d1 = new Donut(p1,30,15);
+		System.out.println(d1.toString());
 	
 		
 	}
