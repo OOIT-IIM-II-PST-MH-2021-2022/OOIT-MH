@@ -69,7 +69,7 @@ public class Test  {
 		System.out.println(p1 == p2);
 		System.out.println(p1);*/
 		
-		Circle c2 = new Circle(p1, 30, true);
+		//Circle c2 = new Circle(p1, 30, true);
 		//System.out.println(c2.getCenter() + ", " + c2.getRadius() + ", " + c2.isSelected());
 		//System.out.println(c2.toString());
 		//System.out.println(p1.toString());
@@ -95,10 +95,15 @@ public class Test  {
 		System.out.println(d1.equals(d2));*/
 		
 		//Vezba 6
-		System.out.println(c2.toString());
+		//System.out.println(c2.toString());
 		Donut d1 = new Donut(p1,30,15);
 		System.out.println(d1.toString());
 	
+		//Vezbe 7
+		Circle c1 = new Donut(p1,40,20);
+		Circle c2 = new Circle(p1, 60);
+		System.out.println(c1.compareTo(c2));
+		
 		
 	}
 

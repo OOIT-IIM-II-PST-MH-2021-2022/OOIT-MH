@@ -49,6 +49,24 @@ public class Rectangle extends Shape {
 		g.drawRect(upperLeft.getX(), upperLeft.getY(), width, height);
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		upperLeft.moveTo(x, y);
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		upperLeft.moveBy(byX, byY);
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if(obj instanceof Rectangle) {
+			return area() - ((Rectangle)obj).area();
+		}
+		return 0;
+	}
+	
 	//Konstruktori
 	public Rectangle() {
 		
@@ -83,5 +101,8 @@ public class Rectangle extends Shape {
 	public void setHeight(int height) {
 		this.height = height;
 	}
+
+	
+	
 
 }

@@ -20,15 +20,17 @@ public class Drawing extends JPanel {
 	
 	public void paint(Graphics g) {
 		Point p1 = new Point(533,384);
-		p1.draw(g);
 		Point p2 = new Point(480,300);
-		p2.draw(g);
 		Line l1 = new Line(p1,p2);
+		l1.moveBy(50, 50);
 		l1.draw(g);
 		Rectangle r1 = new Rectangle(p2, 53, 84);
 		r1.draw(g);
-		Circle c1 = new Circle(p1, 30);
+		Circle c1 = new Circle(new Point(300,300), 30);
+		c1.moveTo(200, 200);
 		c1.draw(g);
+		p1.draw(g);
+		p2.draw(g);
 		
 	}
 	

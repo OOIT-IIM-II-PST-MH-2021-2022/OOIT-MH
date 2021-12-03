@@ -41,6 +41,26 @@ public class Point extends Shape {
 		g.drawLine(x, y+2, x, y-2);
 	}
 	
+	@Override
+	public void moveTo(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
+	public void moveBy(int byX, int byY) {
+		this.x += x;
+		this.y += y;
+	}
+	
+	@Override
+	public int compareTo(Object obj) {
+		if(obj instanceof Point) {
+			return (int)(distance(new Point(0,0)) - ((Point)obj).distance(new Point(0,0)));
+		}
+		return 0;
+	}
+	
 	//Konstruktori
 	
 	public Point() {
@@ -73,5 +93,7 @@ public class Point extends Shape {
 	public void setY(int y) {
 		this.y = y;
 	}
+
+	
 	
 }

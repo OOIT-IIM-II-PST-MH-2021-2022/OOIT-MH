@@ -43,6 +43,14 @@ public class Donut extends Circle {
 		g.drawOval(center.getX() - innerRadius, center.getY()-innerRadius, innerRadius*2, innerRadius*2);
 	}
 	
+	@Override
+	public int compareTo(Object obj) {
+		if(obj instanceof Donut) {
+			return (int)(area() - ((Donut)obj).area());
+		}
+		return 0;
+	}
+	
 	//Konstruktori
 	public Donut() {
 		
