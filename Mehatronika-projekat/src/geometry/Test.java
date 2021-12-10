@@ -1,8 +1,10 @@
 package geometry;
 
+import javax.swing.JOptionPane;
+
 public class Test  {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception  {
 		Point p1 = new Point();
 		//System.out.println(p1.getX());
 		Point p2 = new Point();
@@ -103,6 +105,22 @@ public class Test  {
 		Circle c1 = new Donut(p1,40,20);
 		Circle c2 = new Circle(p1, 60);
 		System.out.println(c1.compareTo(c2));
+		
+		//Vezbe 8
+		
+		
+		try {
+			c1.setRadius(-20);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "Radius mora biti veci od 0!", "Greska", 
+					JOptionPane.ERROR_MESSAGE);
+		}
+		
+		//Losa praksa
+		//c1.setRadius(0);
+		
+		System.out.println("Cao");
+		System.out.println(c1.getRadius());
 		
 		
 	}
